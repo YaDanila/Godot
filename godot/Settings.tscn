@@ -1,0 +1,181 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Settings.gd" type="Script" id=1]
+[ext_resource path="res://Logo/RozhinGames.png" type="Texture" id=4]
+[ext_resource path="res://Music.tscn" type="PackedScene" id=5]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Fonts/Lato-Black.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://Fonts/Lato-Black.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://Fonts/Lato-Black.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 40
+font_data = SubResource( 5 )
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://Fonts/Lato-Black.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 60
+font_data = SubResource( 7 )
+
+[node name="Settings" type="Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 537.884
+margin_top = 324.666
+margin_right = -542.116
+margin_bottom = -326.334
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Settings" type="Label" parent="CanvasLayer"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -110.0
+margin_top = 357.109
+margin_right = 110.0
+margin_bottom = 430.109
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Settings"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackMenu" type="Button" parent="CanvasLayer"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = 101.471
+margin_right = 99.9999
+margin_bottom = 144.471
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+text = "Back to menu"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="Label" parent="CanvasLayer"]
+visible = false
+margin_left = 816.126
+margin_top = 470.622
+margin_right = 945.126
+margin_bottom = 519.622
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 1, 1 )
+text = "Music: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sounds" type="Label" parent="CanvasLayer"]
+visible = false
+margin_left = 792.0
+margin_top = 550.0
+margin_right = 944.0
+margin_bottom = 599.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 1, 1 )
+text = "Sounds: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+visible = false
+position = Vector2( 959.129, 238.434 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 4 )
+
+[node name="plus" type="Button" parent="CanvasLayer"]
+visible = false
+margin_left = 965.037
+margin_top = 455.622
+margin_right = 1012.04
+margin_bottom = 534.622
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+text = "+"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="plus2" type="Button" parent="CanvasLayer"]
+visible = false
+margin_left = 963.145
+margin_top = 535.0
+margin_right = 1010.15
+margin_bottom = 614.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+text = "+"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="minus" type="Button" parent="CanvasLayer"]
+visible = false
+margin_left = 1033.34
+margin_top = 455.622
+margin_right = 1067.34
+margin_bottom = 534.622
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "-"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="minus2" type="Button" parent="CanvasLayer"]
+visible = false
+margin_left = 1032.51
+margin_top = 535.0
+margin_right = 1066.51
+margin_bottom = 614.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "-"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" parent="." instance=ExtResource( 5 )]
+position = Vector2( 209.123, 232.444 )
+
+[connection signal="pressed" from="CanvasLayer/BackMenu" to="." method="_on_BackMenu_pressed"]
+[connection signal="pressed" from="CanvasLayer/plus" to="." method="_on_plus_pressed"]
+[connection signal="pressed" from="CanvasLayer/plus2" to="." method="_on_plus2_pressed"]
+[connection signal="pressed" from="CanvasLayer/minus" to="." method="_on_minus_pressed"]
+[connection signal="pressed" from="CanvasLayer/minus2" to="." method="_on_minus2_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/HitZombies.mp3-5f225af266d11ec274c86673e3b8d0dc.mp3str"
+
+[deps]
+
+source_file="res://Sounds/HitZombies.mp3"
+dest_files=[ "res://.import/HitZombies.mp3-5f225af266d11ec274c86673e3b8d0dc.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

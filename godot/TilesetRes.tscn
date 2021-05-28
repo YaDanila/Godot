@@ -1,0 +1,230 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Fallen_Angels_2/Map/Tile/12.png" type="Texture" id=1]
+[ext_resource path="res://Fallen_Angels_2/Map/Tile/6.png" type="Texture" id=2]
+[ext_resource path="res://Fallen_Angels_2/Map/Tile/8.png" type="Texture" id=3]
+[ext_resource path="res://Fallen_Angels_2/Map/Tile/9.png" type="Texture" id=4]
+[ext_resource path="res://Fallen_Angels_2/Map/Tile/7.png" type="Texture" id=5]
+[ext_resource path="res://Fallen_Angels_2/Map/Tile/14.png" type="Texture" id=6]
+[ext_resource path="res://Fallen_Angels_2/Map/Tile/10.png" type="Texture" id=7]
+[ext_resource path="res://Fallen_Angels_2/Map/Tile/13.png" type="Texture" id=8]
+[ext_resource path="res://Fallen_Angels_2/Map/Tile/15.png" type="Texture" id=9]
+[ext_resource path="res://Fallen_Angels_2/Map/Tile/16.png" type="Texture" id=10]
+[ext_resource path="res://Fallen_Angels_2/Map/Tile/11.png" type="Texture" id=11]
+[ext_resource path="res://Fallen_Angels_2/Map/Tile/1.png" type="Texture" id=12]
+[ext_resource path="res://Fallen_Angels_2/Map/Tile/2.png" type="Texture" id=13]
+[ext_resource path="res://Fallen_Angels_2/Map/Tile/4.png" type="Texture" id=14]
+[ext_resource path="res://Fallen_Angels_2/Map/Tile/5.png" type="Texture" id=15]
+[ext_resource path="res://Fallen_Angels_2/Map/Tile/3.png" type="Texture" id=16]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 64.0278, 64.2016 )
+
+[node name="TilesetRes" type="Node2D"]
+
+[node name="Tile001" type="Sprite" parent="."]
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile001"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile001/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile002" type="Sprite" parent="."]
+position = Vector2( 182.689, -2.51984 )
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile002"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile002/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile003" type="Sprite" parent="."]
+position = Vector2( 348.86, -2.51984 )
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile003"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile003/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile004" type="Sprite" parent="."]
+position = Vector2( 519.088, -1.25992 )
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile004"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile004/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile005" type="Sprite" parent="."]
+position = Vector2( 687.917, -1.25992 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile005"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile005/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile006" type="Sprite" parent="."]
+position = Vector2( 1.25989, 148.671 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile006"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile006/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile007" type="Sprite" parent="."]
+position = Vector2( 183.948, 153.71 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile007"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile007/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile008" type="Sprite" parent="."]
+position = Vector2( 348.998, 153.71 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile008"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile008/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile009" type="Sprite" parent="."]
+position = Vector2( 508.848, 152.45 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile009"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile009/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile010" type="Sprite" parent="."]
+position = Vector2( 695.476, 152.45 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile010"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile010/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile011" type="Sprite" parent="."]
+position = Vector2( -7.14716, 303.641 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile011"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile011/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile012" type="Sprite" parent="."]
+position = Vector2( 181.429, 309.803 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile012"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile012/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile013" type="Sprite" parent="."]
+position = Vector2( 343.958, 317.5 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile013"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile013/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile014" type="Sprite" parent="."]
+position = Vector2( 529.838, 312.44 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile014"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile014/StaticBody2D"]
+polygon = PoolVector2Array( 63.964, 46.6644, 43.4579, 46.8412, 27.1944, 43.6592, 9.69354, 35.1739, -9.39838, 22.9763, -17.5302, 9.71814, -25.3083, 8.48068, -44.577, 6.18259, -52.1784, 0.702515, -57.6585, 5.29871, -61.7243, 5.82904, -63.8457, 3.53094, -63.8928, -35.0904, -60.1863, -43.0846, -55.1427, -46.5025, 63.9979, -46.5181 )
+
+[node name="Tile015" type="Sprite" parent="."]
+position = Vector2( 702.821, 312.761 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile015"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile015/StaticBody2D"]
+position = Vector2( -1.26831, 0 )
+polygon = PoolVector2Array( 65.2755, -46.5032, 65.4515, 46.147, 50.2677, 45.4796, 42.5924, 40.6408, 32.7479, 41.3083, 20.2338, 45.3128, 4.21576, 47.1482, -7.46411, 44.9791, -16.1406, 41.642, -27.153, 40.1403, -43.0042, 43.6442, -62.3594, 46.8145, -62.7436, -46.5167 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tile016" type="Sprite" parent="."]
+position = Vector2( 877.196, 306.893 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile016"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tile016/StaticBody2D"]
+polygon = PoolVector2Array( 63.9525, 2.74628, 61.5928, 6.75775, 52.39, 0.150635, 41.2995, 6.75775, 22.658, 7.93759, 16.7587, 10.0613, 9.44373, 23.2755, -4.47845, 32.4783, -21.7042, 42.153, -41.9974, 46.8724, -63.2346, 46.6364, -64.1297, 5.71799, -63.9688, -46.5454, 55.6567, -46.5205, 58.6331, -44.6851, 60.9288, -41.5178, 64.3038, -35.1428 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tile017" type="Sprite" parent="."]
+position = Vector2( 361.593, 484.498 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile017"]

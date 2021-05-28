@@ -1,0 +1,80 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://Zombie/Walk6.png" type="Texture" id=1]
+[ext_resource path="res://Zombie/Walk5.png" type="Texture" id=2]
+[ext_resource path="res://Zombie/Walk4.png" type="Texture" id=3]
+[ext_resource path="res://Zombie/Walk1.png" type="Texture" id=4]
+[ext_resource path="res://Zombie/Walk2.png" type="Texture" id=5]
+[ext_resource path="res://Zombie/Walk3.png" type="Texture" id=6]
+[ext_resource path="res://Zombie.gd" type="Script" id=7]
+[ext_resource path="res://Zombie/Dead2.png" type="Texture" id=8]
+[ext_resource path="res://Zombie/Dead7.png" type="Texture" id=9]
+[ext_resource path="res://Zombie/Dead1.png" type="Texture" id=10]
+[ext_resource path="res://Zombie/Dead3.png" type="Texture" id=11]
+[ext_resource path="res://Zombie/Dead5.png" type="Texture" id=12]
+[ext_resource path="res://Zombie/Dead6.png" type="Texture" id=13]
+[ext_resource path="res://Zombie/Dead4.png" type="Texture" id=14]
+[ext_resource path="res://Zombie/Dead8.png" type="Texture" id=15]
+[ext_resource path="res://Zombie/Attack1.png" type="Texture" id=16]
+[ext_resource path="res://Zombie/Attack4.png" type="Texture" id=17]
+[ext_resource path="res://Zombie/Attack2.png" type="Texture" id=18]
+[ext_resource path="res://Zombie/Attack3.png" type="Texture" id=19]
+[ext_resource path="res://Zombie/Attack5.png" type="Texture" id=20]
+[ext_resource path="res://Zombie/Attaxk6.png" type="Texture" id=21]
+[ext_resource path="res://Sounds/AttackZombies.mp3" type="AudioStream" id=22]
+[ext_resource path="res://Sounds/HitZombies.mp3" type="AudioStream" id=23]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 16 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 17 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": false,
+"name": "attack",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 14 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 9 ), ExtResource( 15 ) ],
+"loop": false,
+"name": "death",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 22.5056, 64.7576 )
+
+[node name="Zombie" type="KinematicBody2D"]
+script = ExtResource( 7 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.529739, 1.85406 )
+scale = Vector2( 0.35, 0.35 )
+frames = SubResource( 1 )
+animation = "walk"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -5.6699, 65.3386, -0.759125, 66.7417, 2.74857, 66.1804, 7.79965, 66.4611, 10.8864, 67.1626, 15.9375, 67.4432, 18.7437, 66.0401, 17.6212, 63.6549, 4.85319, 58.1829, 6.53688, 52.1497, 5.97565, 47.0986, 7.93996, 44.7134, 9.06242, 45.8358, 11.167, 46.397, 13.2717, 45.8358, 15.236, 45.2746, 17.9018, 45.8358, 19.5855, 46.397, 18.3227, 52.5706, 15.5166, 59.0247, 18.884, 60.1472, 25.759, 61.8309, 31.652, 63.3743, 33.055, 65.4789, 36.2821, 64.7774, 39.0883, 64.3564, 38.2464, 62.3921, 33.3357, 58.1829, 28.2846, 54.114, 31.7923, 48.221, 33.1954, 41.6266, 34.3178, 40.925, 36.4224, 37.9786, 35.1597, 30.6826, 33.055, 29.2795, 35.185, 18.2436, 33.8607, 10.1652, 35.5823, 9.7679, 35.5823, 7.78141, 31.4769, -1.35646, 26.8417, -10.2295, 24.3255, -12.0835, 21.9417, -14.997, 28.6958, -16.5862, 32.625, -22.0362, 32.75, -29.9112, 32.25, -32.9112, 32.625, -38.0362, 31, -39.5362, 33.75, -42.6612, 32.625, -51.2862, 27.375, -59.2862, 15, -64.7862, 7.125, -64.5362, 2.375, -65.4112, -5, -63.1612, -9.25, -62.7862, -14.5, -65.2862, -22.875, -67.9112, -32.5, -66.0362, -34.75, -63.6612, -39.25, -48.6612, -38.375, -30.7862, -31.625, -11.6612, -24.375, 1.52588e-05, -11.75, -8.24998, -7.5, -14.5, 2, -13.875, 1.25, -12.125, -3.875, -11.25, -10.875, -4.24998, -17.25, 4.75002, -18.125, 6.25002, -16.125, 6.62502, -15.75, 7.50002, -18, 13.125, -18.375, 21.875, -24, 28.25, -24, 29.75, -21.25, 32.625, -19.25, 33.875, -16, 34.125, -11.625, 30.25, -12.375, 27.5, -12.25, 23.875, -13.375, 22.75, -10.875, 15.625, -9.375, 11.125, -3.375, 2.87502, -3.875, 12, -6.125, 23.875, -7.125, 43.5, -7.75, 45, -4.875, 45.25, -5.625, 49.375, -5.5, 53.5, -4.5, 58.5, -5.75, 61.375 )
+
+[node name="DeathCollision" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -76.4396, 22.7551, -77.0696, 18.9754, -75.8096, 15.0381, -75.0222, 9.36847, -74.5497, 1.49397, -72.0299, -0.868382, -66.8327, 1.33648, -66.5177, 2.75389, -61.1631, 2.5964, -55.6509, 3.69883, -57.8558, 1.49397, -57.8558, -3.38823, -56.4384, -8.27042, -55.4934, -11.5777, -44.4691, -11.7352, -29.5075, -10.3178, -21.1606, -8.74289, -16.2784, -9.21536, -3.52167, -7.48297, 2.62045, -4.01818, 6.87268, 0.0765572, 7.66013, 3.85632, 10.495, -0.395912, 14.7472, -2.44328, 17.582, -2.75827, 17.7395, -9.37285, 21.0468, -13.1526, 24.393, -15.4168, 29.9051, -13.8419, 37.4647, -15.8892, 45.4967, -13.0544, 53.3712, -9.58962, 58.8833, -3.4475, 64.6716, 5.7462, 61.0493, 19.4478, 56.6396, 28.2673, 44.8278, 36.7718, 32.8586, 37.2442, 27.5039, 34.7244, 26.7164, 30.7871, 20.7318, 30.6296, 16.3221, 27.9523, 13.1723, 26.8499, 14.2747, 25.1175, 10.18, 22.1252, 9.07755, 25.7474, 6.87268, 24.1726, 4.66782, 22.1252, 3.72288, 18.8179, -0.0568848, 20.5503, -2.41924, 23.7001, -11.5537, 26.6924, -22.4205, 29.9997, -27.4602, 29.5272, -37.5395, 28.7398, -40.8468, 30.7871, -45.2566, 32.0471, -49.3513, 29.8422, -50.2962, 26.5349, -50.4537, 25.1175, -53.446, 25.59, -53.1311, 21.8102, -61.3205, 22.2827, -65.8878, 21.3377, -71.5574, 27.6373, -75.6521, 33.1495, -77.6995, 30.7871, -77.6995, 27.1649, -77.857, 26.0624 )
+disabled = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2( 26.4639, 2.70783 )
+shape = SubResource( 2 )
+
+[node name="Attack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 22 )
+
+[node name="Hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://camera_menu.gd" type="Script" id=1]
+[ext_resource path="res://Music/bg.mp3" type="AudioStream" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Fonts/Lato-Black.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = SubResource( 1 )
+
+[node name="camera_menu" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 962.58, 539.246 )
+current = true
+
+[node name="Play" type="Button" parent="."]
+margin_left = 871.368
+margin_top = 224.048
+margin_right = 1079.37
+margin_bottom = 351.048
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 1, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 1, 0, 1 )
+text = "Play"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="."]
+margin_left = 875.609
+margin_top = 393.343
+margin_right = 1063.61
+margin_bottom = 520.343
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 1, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 1, 0, 1 )
+text = "Exit"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
+
+[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]

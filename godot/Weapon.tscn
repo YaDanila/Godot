@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://alien_predator_mask/predatormask__0042_fire_8.png" type="Texture" id=1]
+[ext_resource path="res://Weapon.gd" type="Script" id=2]
+
+[node name="Weapon" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 339.652, 184.48, 68.2745, 46.2008 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -0.891907, 0.297302 )
+polygon = PoolVector2Array( -1.97912, 3.11857, -0.56694, 3.11857, -0.0838261, 3.45303, -1.05006, 4.82805, -0.0466633, 5.12535, 2.62905, 4.6794, 5.86221, 3.34154, 7.869, 2.11517, 9.0582, 0.591502, 9.54132, 0.591502, 9.42983, -1.74975, 8.94671, -1.56394, 8.79806, -2.71598, 7.79467, -4.05384, 5.86221, -4.94574, 3.66961, -5.61467, 2.40608, -5.24304, 0.733753, -5.13156, 0.0276623, -4.90858, 0.362127, -4.35114, 0.39929, -3.97951, -1.34736, -4.12816, -1.68182, -3.83086, -1.05006, -3.45923, -0.418291, -2.93896, -0.232477, -2.45584, -3.65145, -2.23286, -3.53996, -1.45245, -4.50619, -1.26663, -4.76633, -0.486217, -6.62446, -0.226078, -7.25623, 0.405688, -6.8846, 0.888803, -6.17851, 1.70638, -5.65823, 1.85503, -5.17512, 1.63206, -5.10079, 2.00368, -3.98591, 2.07801, -2.98252, 1.78071, -1.97912, 2.04085, -1.75615, 2.44964 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_Weapon_body_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
